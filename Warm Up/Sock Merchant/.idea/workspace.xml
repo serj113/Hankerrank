@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f9099b8-5341-4446-ba04-9b01e4260a78" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.kt" afterDir="false" />
+    <list default="true" id="75c3a76a-c785-4a95-b0fe-07c544f22b65" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Data Structures/untitled/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../Data Structures/untitled/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Data Structures/untitled/src/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Data Structures/untitled/src/main.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +21,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+            <state relative-caret-position="408">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+              <folding>
+                <element signature="e#0#429#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,18 +68,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="2D Array - DS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="untitled" type="462c0819:PsiDirectoryNode" />
+              <item name="Sock Merchant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sock Merchant" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="2D Array - DS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="untitled" type="462c0819:PsiDirectoryNode" />
+              <item name="Sock Merchant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sock Merchant" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sock Merchant" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sock Merchant" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -82,9 +92,6 @@
         </subPane>
       </pane>
     </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -103,11 +110,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3f9099b8-5341-4446-ba04-9b01e4260a78" name="Default Changelist" comment="" />
-      <created>1573203394383</created>
+      <changelist id="75c3a76a-c785-4a95-b0fe-07c544f22b65" name="Default Changelist" comment="" />
+      <created>1573234948393</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1573203394383</updated>
+      <updated>1573234948393</updated>
     </task>
     <servers />
   </component>
@@ -145,8 +152,11 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        <state relative-caret-position="408">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="e#0#429#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

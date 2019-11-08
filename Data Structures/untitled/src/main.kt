@@ -29,6 +29,7 @@ fun hourglassSum(arr: Array<Array<Int>>): Int {
             }
         }
     }
+    return sum
 }
 
 fun main(args: Array<String>) {
