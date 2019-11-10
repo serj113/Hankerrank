@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3f240e07-544f-49ac-9d20-4749bbf0a554" name="Default Changelist" comment="" />
+    <list default="true" id="61e4f581-e1be-476e-9449-9e0bcdbc7972" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/New Year Chaos.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/New Year Chaos/META-INF/New Year Chaos.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Arrays Left Rotation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Arrays Left Rotation/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +30,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+            <state relative-caret-position="45">
+              <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="47" selection-end-column="1" />
               <folding>
                 <element signature="e#0#429#0" expanded="true" />
               </folding>
@@ -64,19 +77,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="Arrays Left Rotation" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Arrays Left Rotation" type="462c0819:PsiDirectoryNode" />
+              <item name="New Year Chaos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="New Year Chaos" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -96,7 +109,7 @@
   </component>
   <component name="RunManager">
     <configuration name="MainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
-      <module name="Arrays Left Rotation" />
+      <module name="New Year Chaos" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -119,11 +132,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="3f240e07-544f-49ac-9d20-4749bbf0a554" name="Default Changelist" comment="" />
-      <created>1573370181127</created>
+      <changelist id="61e4f581-e1be-476e-9449-9e0bcdbc7972" name="Default Changelist" comment="" />
+      <created>1573386507385</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1573370181127</updated>
+      <updated>1573386507385</updated>
     </task>
     <servers />
   </component>
@@ -162,8 +175,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+        <state relative-caret-position="45">
+          <caret line="19" column="45" lean-forward="true" selection-start-line="19" selection-start-column="45" selection-end-line="47" selection-end-column="1" />
           <folding>
             <element signature="e#0#429#0" expanded="true" />
           </folding>
