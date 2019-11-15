@@ -19,7 +19,22 @@ import kotlin.text.*
 
 // Complete the makeAnagram function below.
 fun makeAnagram(a: String, b: String): Int {
-    
+    val tables = hashMapOf<Char, Int>()
+    for (char in a) {
+        if (tables.containsKey(char)) {
+            tables[char] = tables[char]!!.plus(1)
+        } else {
+            tables[char] = 1
+        }
+    }
+    for (char in b) {
+        if (tables.containsKey(char)) {
+            tables[char] = tables[char]!!.minus(1)
+        } else {
+            tables[char] = -1
+        }
+    }
+    return tables.map { Math.abs(it.value) }.sum()
 }
 
 fun main(args: Array<String>) {
