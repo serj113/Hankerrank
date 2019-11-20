@@ -35,7 +35,7 @@ fun sherlockAndAnagrams(s: String): Int {
     return substrings.map { it.value.sumN() }.sum()
 }
 
-fun Int.sumN() = (this / 2) * (1 + this)
+fun Int.sumN() = this * (1 + this) / 2
 
 fun main(args: Array<String>) {
     val scan = Scanner(System.`in`)
