@@ -18,29 +18,24 @@ import kotlin.sequences.*
 import kotlin.text.*
 
 // Complete the sherlockAndAnagrams function below.
-fun isAnagram(s1: String, s2: String): Boolean {
-    if (s1.count() != s2.count()) {
-        return false
+fun sherlockAndAnagrams(s: String): Int {
+    val substrings = hashMapOf<String, Int>()
+    for (i in 0 until s.count()) {
+        for (j in (i + 1).rangeTo(s.count())) {
+            val substring = s.substring(i, j).toCharArray()
+            Arrays.sort(substring)
+            val jointedSubstring = substring.joinToString { "$it" }
+            if (substrings.containsKey(jointedSubstring)) {
+                substrings[jointedSubstring] = substrings[jointedSubstring]!!.plus(1)
+            } else {
+                substrings[jointedSubstring] = 1
+            }
+        }
     }
-    
-    return true
+    return substrings.map { it.value.sumN() }.sum()
 }
 
-fun sherlockAndAnagrams(s: String): Int {
-    val substrings = mutableListOf<String>()
-    var count = 0
-    for (i in 1 until s.count()) {
-        for (j in 0.rangeTo(s.count() - i)) {
-            substrings.add(s.substring(j, j+i))
-        }
-    }
-    for (i in 0 until substrings.size - 1) {
-        for (j in i+1 until substrings.size) {
-            count += if (isAnagram(substrings[i], substrings[j])) 1 else 0
-        }
-    }
-    return count
-}
+fun Int.sumN() = (this / 2) * (1 + this)
 
 fun main(args: Array<String>) {
     val scan = Scanner(System.`in`)
