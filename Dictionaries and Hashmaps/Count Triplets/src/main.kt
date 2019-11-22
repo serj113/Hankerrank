@@ -21,10 +21,15 @@ import kotlin.text.*
 fun countTriplets(arr: Array<Long>, r: Long): Long {
     val map1 = hashMapOf<Long, Long>()
     val map2 = hashMapOf<Long, Long>()
-    val starter = arr[0]
-    for (i in 1 until arr.count()) {
-
+    var counter = 0L
+    for (value in arr) {
+        counter += map2[value] ?: 0L
+        if (value % r == 0L) {
+            map2[value*r] = (map1[value/r] ?: 0L) + (map2[value*r] ?: 0L)
+        }
+        map1[value] = 1 + (map1[value] ?: 0L)
     }
+    return counter
 }
 
 fun main(args: Array<String>) {
