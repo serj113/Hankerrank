@@ -20,23 +20,26 @@ import kotlin.text.*
 // Complete the substrCount function below.
 fun substrCount(n: Int, s: String): Long {
     var count = 0L
-    for (i in 0 until s.count()) {
-        for (j in (i + 1).rangeTo(s.count())) {
-            if (isSpecialString(s.substring(i, j))) count++
+    var i = 0
+    var charCount = IntArray(n) { 0 }
+    while (i < n) {
+        var j = i + 1
+        var lastSame = 1
+        while (j < n && s[i] == s[j]) {
+            j++
+            lastSame++
+        }
+        charCount[i] = lastSame
+        count += lastSame * (lastSame + 1) / 2
+        i = j
+    }
+    for (i in 1 until n) {
+        if (s[i] == s[i-1]) charCount[i] = charCount[i - 1]
+        if (i > 0 && i < (n - 1) && s[i - 1] == s[i + 1] && s[i] != s[i - 1]) {
+            count += Math.min(charCount[i - 1], charCount[i + 1])
         }
     }
     return count
-}
-
-fun isSpecialString(s: String): Boolean {
-    if (s.count() == 1) return true
-    val isOdd = s.count() % 2 == 1
-    val char = s[0]
-    for (i in s.indices) {
-        if (isOdd && i == s.count() / 2) continue
-        if (s[i] != char) return false
-    }
-    return true
 }
 
 fun main(args: Array<String>) {
