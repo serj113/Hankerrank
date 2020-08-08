@@ -19,8 +19,22 @@ import kotlin.text.*
 
 // Complete the breakingRecords function below.
 fun breakingRecords(scores: Array<Int>): Array<Int> {
-
-
+    val best = scores.first()
+    var lastBest = best
+    var lastWorst = best
+    var higher = 0
+    var lower = 0
+    scores.map {
+        if (it < lastWorst) {
+            lower += 1
+            lastWorst = it
+        }
+        if (it > lastBest) {
+            higher += 1
+            lastBest = it
+        }
+    }
+    return arrayOf(higher, lower)
 }
 
 fun main(args: Array<String>) {
