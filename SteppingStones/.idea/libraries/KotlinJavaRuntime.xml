@@ -6,12 +6,6 @@
       <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-test.jar!/" />
       <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-jdk7.jar!/" />
       <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-jdk8.jar!/" />
-      <root url="jar://$USER_HOME$/Downloads/jar_files/kotlinx-coroutines-core-jvm-1.5.2-native-mt.jar!/" />
-      <root url="jar://$USER_HOME$/Downloads/jar_files/kotlinx-coroutines-core-1.5.2-native-mt.jar!/" />
-      <root url="jar://$USER_HOME$/Downloads/jar_files/annotations-13.0.jar!/" />
-      <root url="jar://$USER_HOME$/Downloads/jar_files/kotlin-stdlib-1.5.30.jar!/" />
-      <root url="jar://$USER_HOME$/Downloads/jar_files/kotlin-stdlib-jdk7-1.5.30.jar!/" />
-      <root url="jar://$USER_HOME$/Downloads/jar_files/kotlin-stdlib-jdk8-1.5.30.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
@@ -21,6 +15,5 @@
       <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-jdk7-sources.jar!/" />
       <root url="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-jdk8-sources.jar!/" />
     </SOURCES>
-    <jarDirectory url="jar://$USER_HOME$/Downloads/jar_files/kotlinx-coroutines-core-1.5.2-native-mt.jar!/" recursive="false" />
   </library>
 </component>
