@@ -27,8 +27,30 @@ import kotlin.text.*
  */
 
 fun getTotalX(a: Array<Int>, b: Array<Int>): Int {
-    // Write your code here
+    var result = 0
 
+    for (i in 1..b.first()) {
+        var first = true
+        for (j in a) {
+            if (i % j != 0) {
+                first = false
+                break
+            }
+        }
+
+        var second = true
+        for (j in b) {
+            if (j % i != 0) {
+                second = false
+                break
+            }
+        }
+
+        if (first && second) {
+            result++
+        }
+    }
+    return result
 }
 
 fun main(args: Array<String>) {
