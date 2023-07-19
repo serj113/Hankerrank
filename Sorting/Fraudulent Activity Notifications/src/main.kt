@@ -13,65 +13,33 @@ import kotlin.io.*
 import kotlin.jvm.*
 import kotlin.jvm.functions.*
 import kotlin.jvm.internal.*
+import kotlin.math.exp
 import kotlin.ranges.*
 import kotlin.sequences.*
 import kotlin.text.*
 
 // Complete the activityNotifications function below.
 fun activityNotifications(expenditure: Array<Int>, d: Int): Int {
-    val tempMedian = arrayListOf<Int>()
-    var counter = 0
+    var count = 0
+    val group = mutableListOf<Int>()
     for (i in expenditure.indices) {
         if (i >= d) {
-            if (expenditure[i] >= tempMedian.getMedian() * 2) {
-                counter++
+            val tempGroup = mutableListOf<Int>().apply {
+                addAll(group)
+                sort()
             }
-            tempMedian.remove(expenditure[i - d])
+            val median = tempGroup.getMedian()
+            if (expenditure[i] >= median * 2) {
+                count++
+            }
+            group.removeAt(0)
         }
-        tempMedian.insertSorted(expenditure[i])
+        group.add(expenditure[i])
     }
-    return counter
+    return count
 }
 
-fun ArrayList<Int>.insertSorted(value: Int) {
-    if (size == 0 || value > get(size - 1)) {
-        add(value)
-    } else if (value < get(0)) {
-        add(0, value)
-    } else if (size % 2 == 0) {
-        if (value > get(size / 2)) {
-            for (i in (size / 2) until size) {
-                if (value <= get(i)) {
-                    add(i, value)
-                }
-            }
-        } else if (value < get(size / 2)) {
-            for (i in (size / 2) downTo 1) {
-                if (value >= get(i)) {
-                    add(i, value)
-                }
-            }
-        } else {
-            add((size / 2), value)
-        }
-    } else {
-        if (value > get(size / 2)) {
-            for (i in (size / 2) until size) {
-                if (value <= get(i)) {
-                    add(i, value)
-                }
-            }
-        } else {
-            for (i in (size / 2) downTo 1) {
-                if (value >= get(i)) {
-                    add(i, value)
-                }
-            }
-        }
-    }
-}
-
-fun ArrayList<Int>.getMedian(): Int {
+fun MutableList<Int>.getMedian(): Int {
     return if (size % 2 == 1) this[size / 2]
     else {
         val tempMed = (get((size / 2) - 1) + get(size / 2))
