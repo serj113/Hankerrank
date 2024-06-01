@@ -32,6 +32,33 @@ fun gradingStudents(grades: Array<Int>): Array<Int> {
         val remain = 5 - (grades[index] % 5)
         if (remain >= 3) {
             continue
+            fun gradingStudents(grades: Array<Int>): Array<Int> {
+                for (index in grades.indices) {
+                    if (grades[index] < 38) {
+                        continue
+                    }
+                    val remain = 5 - (grades[index] % 5)
+                    if (remain >= 3) {
+                        continue
+                    }
+                    grades[index] += remain
+                }
+                return grades
+            }
+
+            fun main(args: Array<String>) {
+                val gradesCount = readLine()!!.trim().toInt()
+
+                val grades = Array<Int>(gradesCount, { 0 })
+                for (i in 0 until gradesCount) {
+                    val gradesItem = readLine()!!.trim().toInt()
+                    grades[i] = gradesItem
+                }
+
+                val result = gradingStudents(grades)
+
+                println(result.joinToString("\n"))
+            }
         }
         grades[index] += remain
     }
