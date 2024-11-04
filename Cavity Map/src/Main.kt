@@ -26,11 +26,17 @@ import kotlin.text.*
 
 fun cavityMap(grid: Array<String>): Array<String> {
     val n = grid.size
-    for (i in 1..(n-2)) {
-        for (j in i..(n-2)) {
-            
+    for (i in 1..(n - 2)) {
+        for (j in 1..(n - 2)) {
+            if (grid[i][j] > grid[i - 1][j] &&
+                grid[i][j] > grid[i][j - 1] &&
+                grid[i][j] > grid[i + 1][j] &&
+                grid[i][j] > grid[i][j + 1]) {
+                grid[i] = grid[i].replaceRange(startIndex = j, endIndex = j + 1, "X")
+            }
         }
     }
+    return grid
 }
 
 fun main(args: Array<String>) {
