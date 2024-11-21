@@ -25,8 +25,29 @@ import kotlin.text.*
  */
 
 fun superReducedString(s: String): String {
-    // Write your code here
+    val stack = ArrayDeque<Char>(s.length)
+    for (i in s.indices) {
+        stack.lastOrNull()?.let { c ->
+            if (c == s[i]) {
+                stack.removeLast()
+            } else {
+                stack.add(s[i])
+            }
+        } ?: run {
+            stack.add(s[i])
+        }
+    }
+    var result = ""
+    do {
+        val c = stack.removeLastOrNull()
+        c?.let {
+            result = it + result
+        }
+    } while (c != null)
 
+    return if (result.isEmpty()) {
+        "Empty String"
+    } else result
 }
 
 fun main(args: Array<String>) {
