@@ -24,20 +24,31 @@ import kotlin.text.*
  * The function accepts INTEGER_ARRAY arr as parameter.
  */
 
+val sorted: MutableList<Int> = mutableListOf()
+
 fun findMedian(arr: Array<Int>): Int {
-    val sorted: MutableList<Int> = arr.toMutableList()
-    for (i in 0..<arr.lastIndex) {
-        for (j in 1..arr.lastIndex) {
-            if (arr[i] > arr[j]) {
-                arr[i] = arr[j]
-                arr[j] = temp
-            } else {
-                break
-            }
-        }
+    sorted.add(arr.first())
+    for (i in 1..arr.lastIndex) {
+        add(arr[i], 0, sorted.lastIndex)
     }
 
-    return sorted[arr.lastIndex/2]
+    return sorted[sorted.lastIndex/2]
+}
+
+fun add(value: Int, start: Int, end: Int) {
+    if (start == end) {
+        val i = if (value < sorted[start]) {
+            start
+        } else start + 1
+        sorted.add(i, value)
+    } else {
+        val mid = (start + end) / 2
+        if (value < sorted[mid]) {
+            add(value, start, mid)
+        } else {
+            add(value, mid + 1, end)
+        }
+    }
 }
 
 fun main(args: Array<String>) {
