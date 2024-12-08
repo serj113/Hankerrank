@@ -24,9 +24,10 @@ import kotlin.text.*
  * The function accepts LONG_INTEGER n as parameter.
  */
 
-fun flippingBits(n: Long): Long {
-    // Write your code here
+const val bigValue = 4294967295L
 
+fun flippingBits(n: Long): Long {
+    return bigValue - n
 }
 
 fun main(args: Array<String>) {
