@@ -1,8 +1,14 @@
 import java.lang.StringBuilder
 
 fun main() {
-    val result = thirdSolution("ACBDACBD")
+    val result = thirdSolution("CABABD")
     println("Result $result")
+}
+
+var result = ""
+
+fun solution(s: String): String {
+    
 }
 
 fun thirdSolution(s: String): String {
