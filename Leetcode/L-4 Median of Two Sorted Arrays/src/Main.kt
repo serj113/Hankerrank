@@ -10,8 +10,8 @@ fun main() {
 
 class Solution {
     fun findMedianSortedArrays(nums1: IntArray, nums2: IntArray): Double {
-        val lenght = nums1.size + nums2.size
-        val all = IntArray(lenght)
+        val length = nums1.size + nums2.size
+        val all = IntArray(length)
         var x = 0
         var y = 0
         for (i in all.indices) {
@@ -24,10 +24,10 @@ class Solution {
             }
         }
 
-        return if (lenght % 2 == 1) {
-            all[lenght / 2].toDouble()
+        return if (length % 2 == 1) {
+            all[length / 2].toDouble()
         } else {
-            val half = lenght / 2
+            val half = length / 2
             (all[half - 1] + all[half]) / 2.toDouble()
         }
     }

@@ -1,6 +1,6 @@
 fun main() {
     val result = Solution().letterCombinations(
-        "",
+        "23",
     )
     println("Result $result")
 }

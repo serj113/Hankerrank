@@ -4,10 +4,24 @@ fun main() {
 //            .idealArrays(n = i, maxValue = 5)
 //        print("$result, ")
 //    }
-    print(
-        Solution()
-            .idealArrays(n = 184, maxValue = 389)
+//    print(
+//        Solution()
+//            .idealArrays(n = 184, maxValue = 389)
+//    )
+
+    val value = 2.5
+    val base = 1.3
+    val currencies = listOf(
+        0.922154,
+        16487.682653,
+        149.07425,
+        10.13729,
+        1.0
     )
+    val converted = currencies.map {
+        value * (it/base)
+    }
+    println(converted.toString())
 }
 // 5, 10, 16, 23, 31, 40, 50, 61, 73, 86
 // 4, 8, 13, 19, 26, 34, 43, 53, 64, 76
