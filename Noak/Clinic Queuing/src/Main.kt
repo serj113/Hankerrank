@@ -15,7 +15,7 @@ fun main() = runBlocking {
     val customers = listOf(
         "Cust1", "Cust2", "Cust3", "Cust4", "Cust5",
         "Cust6", "Cust7", "Cust8", "Cust9", "Cust10",
-        "John"
+        "Cust11"
     )
 
     customers.forEach { system.registerCustomer(it) }
@@ -23,21 +23,6 @@ fun main() = runBlocking {
     while (true) {
         delay(500)
     }
-
-    // Simulate time progression
-//    for (minute in 0..13) {
-//        if (minute == 4) {
-//            println("\n>>> CS A finishes first customer late at minute 4")
-//            system.handleCustomerFinished("A", 4)
-//        }
-//        if (minute == 8) {
-//            println("\n>>> CS A finishes second customer late at minute 8")
-//            system.handleCustomerFinished("A", 8)
-//        }
-//
-//        println("\n[Minute $minute]")
-//        system.printAllEstimates(minute)
-//    }
 }
 
 // System state
@@ -66,8 +51,8 @@ class QueueSystem(
         val cs = csList.find { it.id == csId } ?: return
 
         // Backtrack to correct nextAvailableAt based on actual finish
-        if (actualFinishTime > cs.nextAvailableAt - (cs.avgTime * 1000L)) {
-            val delay = actualFinishTime - (cs.nextAvailableAt - (cs.avgTime * 1000L))
+        if (actualFinishTime > cs.nextAvailableAt - (cs.avgTime * 2000L)) {
+            val delay = actualFinishTime - (cs.nextAvailableAt - (cs.avgTime * 2000L))
             cs.nextAvailableAt += delay
 
             // Adjust ETA for remaining customers in this CS queue
@@ -80,10 +65,10 @@ class QueueSystem(
     }
 
     private fun printAllEstimates(currentTime: Long) {
-        val currentDate = getDate(currentTime, "dd/MM/yyyy hh:mm")
+        val currentDate = getDate(currentTime)
         println("--- ETA at time $currentDate ---")
         for (customer in customerQueue) {
-            val eta = getDate(getEtaAtTime(customer, currentTime), "dd/MM/yyyy hh:mm")
+            val eta = getDate(getEtaAtTime(customer, currentTime))
             println("${customer.name}: $eta min (CS ${customer.assignedCS.id})")
         }
     }
@@ -97,11 +82,9 @@ class QueueSystem(
         printAllEstimates(currentTime)
     }
 
-    fun getDate(milliSeconds: Long, dateFormat: String): String {
-        // Create a DateFormatter object for displaying date in specified format.
-        val formatter = SimpleDateFormat(dateFormat)
+    private fun getDate(milliSeconds: Long): String {
+        val formatter = SimpleDateFormat("hh:mm:ss")
 
-        // Create a calendar object that will convert the date and time value in milliseconds to date.
         val calendar = Calendar.getInstance()
         calendar.timeInMillis = milliSeconds
         return formatter.format(calendar.time)
@@ -117,7 +100,7 @@ class QueueSystem(
         fun start(onTick: suspend (Long) -> Unit) {
             runnerJob = scope.launch {
                 while (true) {
-                    delay(1000)
+                    delay(2000)
                     onTick(System.currentTimeMillis())
                 }
             }
